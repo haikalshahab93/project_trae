@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
+import os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
 import jwt from "jsonwebtoken";
@@ -22,6 +23,25 @@ const adminPass = process.env.ADMIN_PASS || "warungaba";
 const jwtSecret = process.env.JWT_SECRET || "dev-secret";
 const questionTargetPerGrade = 1000;
 const passwordIterations = 120000;
+
+function getLanUrls(port, host) {
+  if (host && host !== "0.0.0.0" && host !== "::") {
+    return [`http://${host}:${port}`];
+  }
+
+  const interfaces = os.networkInterfaces();
+  const urls = [];
+
+  Object.values(interfaces).forEach((entries) => {
+    entries?.forEach((entry) => {
+      if (entry.family === "IPv4" && !entry.internal) {
+        urls.push(`http://${entry.address}:${port}`);
+      }
+    });
+  });
+
+  return urls;
+}
 
 function ensureData() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -980,6 +1000,10 @@ app.get("/api/learning", (req, res) => {
   }
 });
 
+app.get("/api/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 app.put("/api/info", authMiddleware, (req, res) => {
   try {
     const current = readInfo();
@@ -1025,7 +1049,16 @@ app.put("/api/learning", authMiddleware, (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
+const port = Number(process.env.PORT || 3001);
+const host = process.env.HOST || "0.0.0.0";
+
+app.listen(port, host, () => {
+  const lanUrls = getLanUrls(port, host);
+
   console.log(`Backend berjalan di http://localhost:${port}`);
+  lanUrls.forEach((url) => {
+    if (url !== `http://${host}:${port}` || host !== "0.0.0.0") {
+      console.log(`Akses jaringan: ${url}`);
+    }
+  });
 });

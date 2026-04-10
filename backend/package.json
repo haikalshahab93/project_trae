@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start:public": "$env:HOST='0.0.0.0'; node index.js",
+    "tunnel:quick": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel --url http://localhost:3001"
   },
   "dependencies": {
     "cors": "^2.8.5",
