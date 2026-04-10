@@ -1,0 +1,6 @@
+:root { font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; color: #111827; background: #ffffff; }
+a { color: #1f2937; text-decoration: none; }
+button { font-family: inherit; }
