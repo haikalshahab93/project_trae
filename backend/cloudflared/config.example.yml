@@ -1,0 +1,7 @@
+tunnel: project-trae-backend
+credentials-file: C:\Users\YOUR_USERNAME\.cloudflared\TUNNEL_ID.json
+
+ingress:
+  - hostname: api.YOUR_DOMAIN.com
+    service: http://localhost:3001
+  - service: http_status:404

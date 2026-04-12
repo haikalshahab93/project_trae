@@ -92,3 +92,28 @@ Quick Tunnel biasanya tidak permanen. Kalau URL berubah:
 - terminal backend dan terminal tunnel tidak boleh ditutup
 - Quick Tunnel cocok untuk demo dan testing
 - untuk pemakaian lebih stabil, gunakan named tunnel atau hosting backend terpisah
+
+## Kalau mau pakai Named Tunnel
+
+Named tunnel Cloudflare lebih stabil, tetapi ada syarat tambahan:
+
+- kamu harus punya domain yang dikelola di Cloudflare
+- kamu perlu membuat subdomain misalnya `api.domainkamu.com`
+
+Template konfigurasi awal sudah disiapkan di `backend/cloudflared/config.example.yml`.
+
+Setelah domain Cloudflare tersedia, alurnya:
+
+```bash
+cd backend
+npm run tunnel:login
+npm run tunnel:create
+cloudflared tunnel route dns project-trae-backend api.domainkamu.com
+npm run tunnel:run:named
+```
+
+Lalu ganti variable GitHub:
+
+```text
+VITE_API_BASE_URL=https://api.domainkamu.com
+```

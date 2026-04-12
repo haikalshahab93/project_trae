@@ -8,7 +8,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "start:public": "$env:HOST='0.0.0.0'; node index.js",
-    "tunnel:quick": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel --url http://localhost:3001"
+    "tunnel:quick": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel --url http://localhost:3001",
+    "tunnel:login": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel login",
+    "tunnel:create": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel create project-trae-backend",
+    "tunnel:run:named": "& 'C:\\Program Files (x86)\\cloudflared\\cloudflared.exe' tunnel --config .\\cloudflared\\config.yml run"
   },
   "dependencies": {
     "cors": "^2.8.5",

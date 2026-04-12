@@ -49,3 +49,39 @@ VITE_API_BASE_URL=https://nama-random.trycloudflare.com
 ```
 
 Quick Tunnel cocok untuk demo dan testing. Kalau ingin stabil untuk pemakaian lama, gunakan named tunnel, port forwarding, atau hosting backend terpisah.
+
+## Named Tunnel
+
+Named tunnel butuh domain yang dikelola di Cloudflare. Kalau belum punya domain di akun Cloudflare, setup named tunnel belum bisa diselesaikan.
+
+Kalau nanti domain sudah ada, urutannya:
+
+```bash
+npm run tunnel:login
+npm run tunnel:create
+```
+
+Lalu buat file konfigurasi dari template:
+
+- salin `backend/cloudflared/config.example.yml`
+- ubah `YOUR_USERNAME`
+- ubah `TUNNEL_ID`
+- ubah `api.YOUR_DOMAIN.com`
+
+Setelah itu arahkan DNS hostname ke tunnel:
+
+```bash
+cloudflared tunnel route dns project-trae-backend api.YOUR_DOMAIN.com
+```
+
+Jalankan named tunnel:
+
+```bash
+npm run tunnel:run:named
+```
+
+Kalau sudah stabil memakai named tunnel, isi GitHub Actions variable:
+
+```text
+VITE_API_BASE_URL=https://api.YOUR_DOMAIN.com
+```
