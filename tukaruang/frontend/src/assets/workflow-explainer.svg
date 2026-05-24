@@ -1,0 +1,41 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowBg" x1="70" y1="40" x2="560" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="flowAccent" x1="120" y1="210" x2="520" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="36" fill="url(#flowBg)"/>
+  <circle cx="98" cy="110" r="48" fill="#DBEAFE"/>
+  <circle cx="548" cy="94" r="34" fill="#BFDBFE"/>
+  <circle cx="522" cy="330" r="58" fill="#DBEAFE" opacity="0.7"/>
+  <path d="M140 210H500" stroke="url(#flowAccent)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="158" cy="210" r="28" fill="#FFFFFF" stroke="#60A5FA" stroke-width="4"/>
+  <circle cx="266" cy="210" r="28" fill="#FFFFFF" stroke="#60A5FA" stroke-width="4"/>
+  <circle cx="374" cy="210" r="28" fill="#FFFFFF" stroke="#60A5FA" stroke-width="4"/>
+  <circle cx="482" cy="210" r="28" fill="#FFFFFF" stroke="#60A5FA" stroke-width="4"/>
+  <text x="158" y="219" text-anchor="middle" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="22" font-weight="700">1</text>
+  <text x="266" y="219" text-anchor="middle" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="22" font-weight="700">2</text>
+  <text x="374" y="219" text-anchor="middle" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="22" font-weight="700">3</text>
+  <text x="482" y="219" text-anchor="middle" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="22" font-weight="700">4</text>
+  <rect x="110" y="270" width="96" height="68" rx="18" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="218" y="270" width="96" height="68" rx="18" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="326" y="270" width="96" height="68" rx="18" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="434" y="270" width="96" height="68" rx="18" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="128" y="289" width="60" height="10" rx="5" fill="#0F172A" opacity="0.9"/>
+  <rect x="236" y="289" width="60" height="10" rx="5" fill="#0F172A" opacity="0.9"/>
+  <rect x="344" y="289" width="60" height="10" rx="5" fill="#0F172A" opacity="0.9"/>
+  <rect x="452" y="289" width="60" height="10" rx="5" fill="#0F172A" opacity="0.9"/>
+  <rect x="128" y="309" width="44" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="236" y="309" width="44" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="344" y="309" width="44" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="452" y="309" width="44" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="182" y="102" width="284" height="70" rx="24" fill="#0F172A"/>
+  <rect x="214" y="126" width="99" height="10" rx="5" fill="#DBEAFE"/>
+  <rect x="214" y="146" width="144" height="10" rx="5" fill="#93C5FD"/>
+  <circle cx="429" cy="137" r="16" fill="#10B981"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="workspaceBg" x1="76" y1="32" x2="612" y2="344" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="workspaceAccent" x1="150" y1="120" x2="540" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="36" fill="url(#workspaceBg)"/>
+  <circle cx="130" cy="84" r="48" fill="#DBEAFE"/>
+  <circle cx="600" cy="320" r="74" fill="#DBEAFE" opacity="0.7"/>
+  <rect x="82" y="78" width="556" height="268" rx="30" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="116" y="112" width="170" height="180" rx="24" fill="#0F172A"/>
+  <rect x="142" y="138" width="84" height="12" rx="6" fill="#DBEAFE"/>
+  <rect x="142" y="162" width="118" height="10" rx="5" fill="#93C5FD"/>
+  <rect x="142" y="204" width="118" height="28" rx="14" fill="#1D4ED8"/>
+  <rect x="142" y="246" width="92" height="10" rx="5" fill="#DBEAFE"/>
+  <rect x="316" y="112" width="288" height="70" rx="22" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="342" y="136" width="92" height="10" rx="5" fill="#0F172A" opacity="0.85"/>
+  <rect x="342" y="156" width="138" height="10" rx="5" fill="#93C5FD"/>
+  <circle cx="558" cy="148" r="16" fill="#10B981"/>
+  <rect x="316" y="204" width="132" height="106" rx="24" fill="url(#workspaceAccent)" opacity="0.96"/>
+  <rect x="476" y="204" width="128" height="106" rx="24" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+  <rect x="338" y="230" width="72" height="10" rx="5" fill="#DBEAFE"/>
+  <rect x="338" y="252" width="88" height="14" rx="7" fill="#FFFFFF"/>
+  <rect x="500" y="230" width="62" height="10" rx="5" fill="#0F172A" opacity="0.85"/>
+  <rect x="500" y="252" width="84" height="10" rx="5" fill="#93C5FD"/>
+  <path d="M520 286L534 298L560 270" stroke="#10B981" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
