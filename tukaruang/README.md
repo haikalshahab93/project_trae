@@ -62,3 +62,8 @@ npm run dev
 - Sistem tidak menyimpan harga kurs harian sebagai data terpisah. Kurs diambil live saat simulasi dan saat transaksi transfer dibuat.
 - `INTERNAL_SERVICE_API_KEY` dan `JWT_SECRET` contoh sudah disiapkan untuk kebutuhan development lokal.
 - Untuk produksi, sebaiknya tambahkan verifikasi biometrik dari vendor KYC khusus agar matching wajah benar-benar tervalidasi.
+
+## Standar Frontend
+
+- Frontend TukarUang memakai design token dan utility atomic untuk tipografi serta warna.
+- Dokumentasi penggunaan token dan utility class ada di `frontend/README.md`.
